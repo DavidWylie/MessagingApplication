@@ -1,0 +1,24 @@
+rabbitmq:
+  image: rabbitmq:management
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+producer:
+  build: ./producer
+  links:
+  - rabbitmq
+  - subscriber
+  ports:
+  - "8080:8080"
+  environment:
+    SPRING_RABBITMQ_HOST: "rabbitmq"
+subscriber:
+  build: ./subscriber
+  links:
+  - rabbitmq
+  ports:
+  - "8081:8081"
+  environment:
+      SPRING_RABBITMQ_HOST: "rabbitmq"
+
+
