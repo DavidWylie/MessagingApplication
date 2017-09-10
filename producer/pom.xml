@@ -41,6 +41,12 @@
             <version>1.16.16</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.libphonenumber</groupId>
+            <artifactId>libphonenumber</artifactId>
+            <version>8.8.1</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 @Configuration
 public class ProducerApplication {
     @Bean
